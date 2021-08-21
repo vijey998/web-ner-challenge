@@ -42,7 +42,7 @@ CARDINAL:    Numerals that do not fall under another type.
 
 ### Instructions to Execute:
 The provided templates have been used for creating the frontend in react and backend using flask.
-1. Make sure to have `Node.js` and `npm` installed.
+1. Make sure to have `Node.js`, `npm` and Python (preferably 3.6+) installed.
    * In case you don't have Node.js or npm installed, refer to the NodeSource blog posts [Installing Node.js Tutorial: Using nvm](https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/) (macOS and Ubuntu) or [Installing Node.js Tutorial: Windows](https://nodesource.com/blog/installing-nodejs-tutorial-windows/) (Windows) for instructions.
 2. Make sure to have "make" installed. The MakeFile as been configured to run the application by simply executing the commands in the following two steps.
 3. Run `make install FRONTEND=react-frontend BACKEND=flask-backend` to setup the backend and frontend environments
