@@ -2,7 +2,7 @@
 
 ### Background
 
-[Named entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) (NER) is a very important and long-standing goal of the NLP community. In it, we attempt to identify and categorize "entities" from text so that we can use them for downstream processing such as argument attachment or [event extraction](http://ceur-ws.org/Vol-779/derive2011_submission_1.pdf).
+[Named entity recognition](https://en.wikipedia.org/wiki/Named-entity_recognition) (NER) is a very important and long-standing goal of the NLP community. In it, we attempt to identify and categorize "entities" from text so that we can use them for downstream processing such as argument attachment or [event extraction](http://ceur-ws.org/Vol-779/derive2011_submission_1.pdf). A web application for NER has been built using a python-flask backend and react-frontend. The same has been explained in detail below with a sample sreenshot of the appliication in the end.
 
 ## Task: Build a web application that can take in text and return named entities.
 
@@ -33,7 +33,7 @@ MONEY:       Monetary values, including unit.
 QUANTITY:    Measurements, as of weight or distance.
 ORDINAL:     “first”, “second”, etc.
 CARDINAL:    Numerals that do not fall under another type.
-* Each identiied entity is grouped under its corresponding entity label on the righthand side. The AG Grid module is used for creating the interactive table.
+* Each identified entity is grouped under its corresponding entity label on the righthand side. The AG Grid module is used for creating the interactive table.
 * If no named entities are found, "No rows found" message is returned in the table.
 * The user has the option to choose from 3 languages - English, French and Spanish. 
 * The user has the option to view/recognise the named entities dynamically as the text is entered in the input text area. This option can be checked off to view the result only upon clicking the Submit button. 
