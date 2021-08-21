@@ -14,22 +14,42 @@ Named entities: John Doe (PERSON), the United States (GPE)
 
 ### Specifications:
 * Text will be no longer than 500 words.
-* Required named entity types are PERSON, GPE (Geopolitical Entity), LOC (Location), ORG (Organization) - you can add more if you choose
-* If no named entities are found, return a "No entities found" message.
+* Spacy is used or recognising entities from the text. Required named entity types are PERSON, GPE (Geopolitical Entity), LOC (Location), ORG (Organization) etc. All entity types are listed here: 
+PERSON:      People, including fictional.
+NORP:        Nationalities or religious or political groups.
+FAC:         Buildings, airports, highways, bridges, etc.
+ORG:         Companies, agencies, institutions, etc.
+GPE:         Countries, cities, states.
+LOC:         Non-GPE locations, mountain ranges, bodies of water.
+PRODUCT:     Objects, vehicles, foods, etc. (Not services.)
+EVENT:       Named hurricanes, battles, wars, sports events, etc.
+WORK_OF_ART: Titles of books, songs, etc.
+LAW:         Named documents made into laws.
+LANGUAGE:    Any named language.
+DATE:        Absolute or relative dates or periods.
+TIME:        Times smaller than a day.
+PERCENT:     Percentage, including ”%“.
+MONEY:       Monetary values, including unit.
+QUANTITY:    Measurements, as of weight or distance.
+ORDINAL:     “first”, “second”, etc.
+CARDINAL:    Numerals that do not fall under another type.
+* Each identiied entity is grouped under its corresponding entity label on the righthand side. The AG Grid module is used for creating the interactive table.
+* If no named entities are found, "No rows found" message is returned in the table.
+* The user has the option to choose from 3 languages - English, French and Spanish. 
+* The user has the option to view/recognise the named entities dynamically as the text is entered in the input text area. This option can be checked off to view the result only upon clicking the Submit button. 
+* Clear Data clears/erases the data from both the input text area and output table.
+* The user also has the option to download the list of recognised entities as a JSON file.
 
-### Templates:
-Because we don't aim to test you on project setup, we have provided templates that you may choose to use if you wish. For the frontend, we've given you templates in [`Vue.js`](https://vuejs.org/), [`React.js`](https://reactjs.org/), and [`Angular`](https://angular.io/). For the backend, we have provided a template in [`Flask`](https://flask.palletsprojects.com/en/2.0.x/).
-1. Make sure you have `Node.js` and `npm` installed.
+### Instructions to Execute:
+The provided templates have been used for creating the frontend in react and backend using flask.
+1. Make sure to have `Node.js` and `npm` installed.
    * In case you don't have Node.js or npm installed, refer to the NodeSource blog posts [Installing Node.js Tutorial: Using nvm](https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/) (macOS and Ubuntu) or [Installing Node.js Tutorial: Windows](https://nodesource.com/blog/installing-nodejs-tutorial-windows/) (Windows) for instructions.
-2. Run `make install FRONTEND=react-frontend BACKEND=flask-backend`
-3. Run `make start FRONTEND=react-frontend BACKEND=flask-backend`
+2. Make sure to have make installed
+3. Run `make install FRONTEND=react-frontend BACKEND=flask-backend` to setup the backend and frontend environments
+4. Run `make start` to run the application
 
-### Judging criteria:
-* **Code quality** - We want to know that you are capable of writing production-level code involving machine learning material.
-* **Usability** - The interface should be intuitive to use for the reviewer.
-* **Accuracy of model** - The model you choose to use should be able to cover the very basics, like recognizing `the United States` as a GPE. We will not be giving it a detailed accuracy score, we just want to know the model works.
-* **Creativity** - This is a catch-all category for whatever else you want to incorporate to show off your skills. Some examples could be implementing more entity types or other linguistic features, creating a more visually appealing interface, creating an option to use a different language, or adding better error handling. This is your time to shine.
+NOTE: The application has been configured for a production-build. The same can be run only by creating a docker image in a linux environment using a Dockerfile similar to the one attached. The conf file for the nginx production server has also been attached.
 
-![Example app](./assets/web_ner_example.png)
+![Example app](./assets/ner-screenshot.png)
 
-> If you have any questions/comments while working on this, please reach out to your contact at ISI.
+> If you have any questions/comments while working on this, please reach out to me at vijeyshr@usc.edu.
