@@ -46,7 +46,8 @@ The provided templates have been used for creating the frontend in react and bac
    * In case you don't have Node.js or npm installed, refer to the NodeSource blog posts [Installing Node.js Tutorial: Using nvm](https://nodesource.com/blog/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu/) (macOS and Ubuntu) or [Installing Node.js Tutorial: Windows](https://nodesource.com/blog/installing-nodejs-tutorial-windows/) (Windows) for instructions.
 2. Make sure to have "make" installed. The MakeFile as been configured to run the application by simply executing the commands in the following two steps.
 3. Run `make install FRONTEND=react-frontend BACKEND=flask-backend` to setup the backend and frontend environments
-4. Run `make start` to run the application
+4. Run `make start` to run the application.
+5. Use `npm run format` to beautify the react code if required. Lint for react is also implemented while compiling the app.
 
 NOTE: The application has been configured for a production-build. The same can be run only by creating a docker image in a linux environment using a Dockerfile similar to the one attached. The conf file for the nginx production server has also been attached.
 
